@@ -10,11 +10,17 @@ import SwiftUI
 struct SettingView: View {
     @State var isBgmOn = true
     @State var isSeOn = true
-    @State var allTap = "true"
     @State var isStatuBa = true
     @Binding var MovingView: Int
     //@State var backColor = Color.white
 
+    
+    
+    
+    //未実装//
+    
+    
+    
     var body: some View {
         NavigationView{
             Form{
@@ -36,9 +42,6 @@ struct SettingView: View {
                     })
                     .toggleStyle(SwitchToggleStyle(tint: .orange))
                 }
-                Section(header: Text("")){
-                    Text("累計タップ回数.......\(allTap)")
-                }
                 
                 Section(header: Text("ディスプレイ設定")){
                     Toggle(isOn: $isStatuBa, label:{
@@ -49,12 +52,13 @@ struct SettingView: View {
                     //ColorPicker("背景色を選択する",selection: $backColor)
                 }
             }
-        }
+        }.background(Color.red)
     }
 }
 
 struct SettingView_Previews: PreviewProvider {
     static var previews: some View {
         SettingView(/*backColor: .white*/MovingView: .constant(TitleView().MovingView))
+            .environmentObject(TimeHandlerViewModel())
     }
 }

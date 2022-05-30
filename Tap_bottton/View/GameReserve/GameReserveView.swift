@@ -27,5 +27,6 @@ struct GameReserveView: View {
 struct GameReserveView_Previews: PreviewProvider {
     static var previews: some View {
         GameReserveView(inputText: .constant(TitleView().inputText), MovingView: .constant(TitleView().MovingView))
+            .environmentObject(TimeHandlerViewModel())
     }
 }

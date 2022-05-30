@@ -26,5 +26,6 @@ struct StandbyGameView: View {
 struct StandbyGameView_Previews: PreviewProvider {
     static var previews: some View {
         StandbyGameView(MovingView: .constant(TitleView().MovingView))
+            .environmentObject(TimeHandlerViewModel())
     }
 }

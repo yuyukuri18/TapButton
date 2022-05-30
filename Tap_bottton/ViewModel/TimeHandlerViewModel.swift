@@ -15,7 +15,6 @@ class TimeHandlerViewModel: ObservableObject {
     @Published var isShowAlert = false
     @Published var isNilAlert = false
     @Published var isMoreAlert = false
-    @Published var isNextView = false
     @Published var allTap = 0
     @Published var pRank = 0
     @Published var pName = ""
@@ -34,7 +33,6 @@ class TimeHandlerViewModel: ObservableObject {
         if (timerValue - count <= 0){
             timerHandler?.invalidate()
             isShowAlert = true
-            isNextView = true
         }
     }
     
@@ -55,6 +53,14 @@ class TimeHandlerViewModel: ObservableObject {
         }
         timerHandler = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { _ in self.downTimer()
         }
+    }
+    
+    func reset(){
+        count = 0
+        nowCount = 0
+        pRank = 0
+        pName = ""
+        pScore = 0
     }
 }
 

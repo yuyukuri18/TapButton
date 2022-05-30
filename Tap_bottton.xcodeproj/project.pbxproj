@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7F35D53328310D9100E4C8D4 /* BtnBackStandby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F35D53228310D9000E4C8D4 /* BtnBackStandby.swift */; };
+		7F39C3562834CE45007ABDF4 /* BtnBackTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F39C3552834CE45007ABDF4 /* BtnBackTitle.swift */; };
 		7F734BDA282B399A00A62157 /* TapGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F734BD9282B399A00A62157 /* TapGameView.swift */; };
 		7F734BDF282B49B900A62157 /* TimeHandlerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F734BDE282B49B900A62157 /* TimeHandlerViewModel.swift */; };
 		7F734BE1282B6B9100A62157 /* ButtonActionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F734BE0282B6B9000A62157 /* ButtonActionModel.swift */; };
@@ -32,6 +33,7 @@
 
 /* Begin PBXFileReference section */
 		7F35D53228310D9000E4C8D4 /* BtnBackStandby.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BtnBackStandby.swift; sourceTree = "<group>"; };
+		7F39C3552834CE45007ABDF4 /* BtnBackTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BtnBackTitle.swift; sourceTree = "<group>"; };
 		7F734BD9282B399A00A62157 /* TapGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapGameView.swift; sourceTree = "<group>"; };
 		7F734BDE282B49B900A62157 /* TimeHandlerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeHandlerViewModel.swift; sourceTree = "<group>"; };
 		7F734BE0282B6B9000A62157 /* ButtonActionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonActionModel.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				7F780752282E95870081D85A /* ResultView.swift */,
+				7F39C3552834CE45007ABDF4 /* BtnBackTitle.swift */,
 			);
 			path = ResultView;
 			sourceTree = "<group>";
@@ -276,6 +279,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F39C3562834CE45007ABDF4 /* BtnBackTitle.swift in Sources */,
 				7F734BDA282B399A00A62157 /* TapGameView.swift in Sources */,
 				7FE634742828F76600F64639 /* RankingView.swift in Sources */,
 				7FAA52762828B7C800E91BB3 /* BtnGameStart.swift in Sources */,

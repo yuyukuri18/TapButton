@@ -18,52 +18,65 @@ struct RankingView: View {
                         .font(.largeTitle)
                         .fontWeight(.bold)
                         .foregroundColor(Color(hue: 0.156, saturation: 0.687, brightness: 0.864))
-                        .frame(width: rankingView.size.width / 3, height: rankingView.size.height / 6)
+                        .frame(width: rankingView.size.width / 3, height: rankingView.size.height / 7)
                     Text("\(ButtonModel.score1)")
-                        .frame(width: rankingView.size.width / 3, height: rankingView.size.height / 6)
+                        .frame(width: rankingView.size.width / 3, height: rankingView.size.height / 7)
                     Text("\(ButtonModel.name1)")
-                        .frame(width: rankingView.size.width / 3, height: rankingView.size.height / 6)
+                        .frame(width: rankingView.size.width / 3, height: rankingView.size.height / 7)
                 }
                 HStack{
                     Text("2nd")
                         .font(.largeTitle)
                         .fontWeight(.bold)
                         .foregroundColor(Color(hue: 0.978, saturation: 0.023, brightness: 0.683))
-                        .frame(width: rankingView.size.width / 3, height: rankingView.size.height / 6)
+                        .frame(width: rankingView.size.width / 3, height: rankingView.size.height / 7)
                     Text("\(ButtonModel.score2)")
-                        .frame(width: rankingView.size.width / 3, height: rankingView.size.height / 5)
+                        .frame(width: rankingView.size.width / 3, height: rankingView.size.height / 7)
                     Text("\(ButtonModel.name2)")
-                        .frame(width: rankingView.size.width / 3, height: rankingView.size.height / 6)
+                        .frame(width: rankingView.size.width / 3, height: rankingView.size.height / 7)
                 }
                 HStack{
                     Text("3rd")
                         .font(.largeTitle)
                         .fontWeight(.bold)
                         .foregroundColor(Color(hue: 0.11, saturation: 0.87, brightness: 0.863))
-                        .frame(width: rankingView.size.width / 3, height: rankingView.size.height / 6)
-                    Text("\(ButtonModel.score3)").frame(width: rankingView.size.width / 3, height: rankingView.size.height / 6)
+                        .frame(width: rankingView.size.width / 3, height: rankingView.size.height / 7)
+                    Text("\(ButtonModel.score3)").frame(width: rankingView.size.width / 3, height: rankingView.size.height / 7)
                     Text("\(ButtonModel.name3)")
-                        .frame(width: rankingView.size.width / 3, height: rankingView.size.height / 6)
+                        .frame(width: rankingView.size.width / 3, height: rankingView.size.height / 7)
                 }
                 HStack{
                     Text("4th")
                         .font(.largeTitle)
                         .fontWeight(.bold)
-                        .frame(width: rankingView.size.width / 3, height: rankingView.size.height / 6)
+                        .frame(width: rankingView.size.width / 3, height: rankingView.size.height / 7)
                     Text("\(ButtonModel.score4)")
-                        .frame(width: rankingView.size.width / 3, height: rankingView.size.height / 6)
+                        .frame(width: rankingView.size.width / 3, height: rankingView.size.height / 7)
                     Text("\(ButtonModel.name4)")
-                        .frame(width: rankingView.size.width / 3, height: rankingView.size.height / 6)
+                        .frame(width: rankingView.size.width / 3, height: rankingView.size.height / 7)
                 }
                 HStack{
                     Text("5th")
                         .font(.largeTitle)
                         .fontWeight(.bold)
-                        .frame(width: rankingView.size.width / 3, height: rankingView.size.height / 6)
-                    Text("\(ButtonModel.score5)").frame(width: rankingView.size.width / 3, height: rankingView.size.height / 6)
+                        .frame(width: rankingView.size.width / 3, height: rankingView.size.height / 7)
+                    Text("\(ButtonModel.score5)").frame(width: rankingView.size.width / 3, height: rankingView.size.height / 7)
                     Text("\(ButtonModel.name5)")
-                        .frame(width: rankingView.size.width / 3, height: rankingView.size.height / 6)
+                        .frame(width: rankingView.size.width / 3, height: rankingView.size.height / 7)
                 }
+                Button(action: {
+                    MovingView = 0
+                }) {
+                    Text("タイトルへ")
+                        .bold()
+                    Image(systemName:"chevron.right")
+
+                }
+                .frame(width: 140, height: 50)
+                .foregroundColor(Color.white)
+                .background(Color.purple)
+                .cornerRadius(15)
+                .frame(width: rankingView.size.width / 3, height: rankingView.size.height / 7)
             }
         })
     }
@@ -72,5 +85,6 @@ struct RankingView: View {
 struct RankingView_Previews: PreviewProvider {
     static var previews: some View {
         RankingView(MovingView: .constant(TitleView().MovingView))
+            .environmentObject(TimeHandlerViewModel())
     }
 }

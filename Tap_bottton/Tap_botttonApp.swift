@@ -10,8 +10,9 @@ import SwiftUI
 @main
 struct Tap_botttonApp: App {
     var body: some Scene {
-        WindowGroup<TitleView> {
+        WindowGroup{
             TitleView()
+                .environmentObject(TimeHandlerViewModel())
         }
     }
 }

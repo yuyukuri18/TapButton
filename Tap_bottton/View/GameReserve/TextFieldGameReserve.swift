@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct TextFieldGameReserve: View {
+    @EnvironmentObject var timeViewModel: TimeHandlerViewModel
     @Binding var inputText: String
     @State var message = ""
     @State var editting = false
@@ -30,5 +31,6 @@ struct TextFieldGameReserve: View {
 struct TextFieldGameReserve_Previews: PreviewProvider {
     static var previews: some View {
         TextFieldGameReserve(inputText: .constant(""))
+            .environmentObject(TimeHandlerViewModel())
     }
 }

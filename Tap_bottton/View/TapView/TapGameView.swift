@@ -28,12 +28,13 @@ struct TapGameView: View {
                 Text("さんのスコア")
             }
             HStack{
-                Text("\(timeViewModel.nowCount)")
+                Text("\(self.timeViewModel.nowCount)")
                     .foregroundColor(Color(hue: 1.0, saturation: 0.837, brightness: 0.98))
                     .font(.largeTitle)
+                
                     .fontWeight(.bold)
                     .onChange(of: timeViewModel.count){value in
-                        if timeViewModel.timerValue - timeViewModel.count == 1{
+                        if timeViewModel.timerValue - timeViewModel.count == 0{
                             MovingView = 6
                             timeViewModel.insertPlayer(n: inputText, c: timeViewModel.nowCount)
                         }
@@ -76,5 +77,6 @@ struct TapGameView: View {
 struct TapGameView_Previews: PreviewProvider {
     static var previews: some View {
         TapGameView(MovingView: .constant(TitleView().MovingView), inputText: .constant(TitleView().inputText))
+            .environmentObject(TimeHandlerViewModel())
     }
 }

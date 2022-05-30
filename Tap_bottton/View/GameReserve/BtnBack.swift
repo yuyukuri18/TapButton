@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct BtnBack: View {
+    @EnvironmentObject var timeViewModel: TimeHandlerViewModel
     @Binding var MovingView: Int
     var body: some View {
         Button(action: {
@@ -27,5 +28,7 @@ struct BtnBack: View {
 struct BtnBack_Previews: PreviewProvider {
     static var previews: some View {
         BtnBack(MovingView: .constant(TitleView().MovingView))
+            .environmentObject(TimeHandlerViewModel())
+
     }
 }

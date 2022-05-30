@@ -44,10 +44,8 @@ struct TitleView: View {
                                 RankingView(MovingView: $MovingView)
                             } else if(MovingView == 3){
                                 GameReserveView(inputText: $inputText, MovingView: $MovingView)
-                                    .environmentObject(timeViewModel)
                             } else if(MovingView == 4){
                                 StandbyGameView(MovingView: $MovingView)
-                                    .environmentObject(timeViewModel)
                             } else if(MovingView == 5){
                                 TapGameView(MovingView: $MovingView, inputText: $inputText)
                                     .environmentObject(timeViewModel)
@@ -60,7 +58,6 @@ struct TitleView: View {
                             .background(Color("BackColor")
                                             .cornerRadius(50)
                                             .opacity(0.4)
-                                        
                             )
                     }
                 }
